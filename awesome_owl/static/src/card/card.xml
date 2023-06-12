@@ -1,9 +1,12 @@
 <templates xml:space="preserve">
     <t t-name="awesome_owl.card" owl="1">
         <div class="card d-inline-block m-2" style="width: 18rem;">
-            <h5><t t-out="this.props.title"/></h5>
-            <p><t t-slot="default"/></p>
-            <p>Secret : <t t-slot="secret"/></p>
+        <button type="button" t-on-click="toggleCard">Toggle</button>
+            <t t-if="this.state.isOpen">
+                <h5><t t-out="this.props.title"/></h5>
+                <p><t t-slot="default"/></p>
+                <p>Secret : <t t-slot="secret"/></p>
+            </t>
         </div>
     </t>
 </templates>
