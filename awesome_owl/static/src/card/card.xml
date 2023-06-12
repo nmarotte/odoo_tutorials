@@ -1,0 +1,8 @@
+<templates xml:space="preserve">
+    <t t-name="awesome_owl.card" owl="1">
+        <div class="card d-inline-block m-2" style="width: 18rem;">
+            <h5><t t-out="this.props.title"/></h5>
+            <p><t t-out="this.props.content"/></p>
+        </div>
+    </t>
+</templates>

@@ -5,6 +5,16 @@
         <div class="p-3">
             hello world
         </div>
+        <div class="row">
+            <Counter onChange.bind="incrementSum"/>
+            <Counter onChange.bind="incrementSum"/>
+        </div>
+        <div class="text-primary">
+            hello world <t t-out="state.sum_value"/>
+        </div>
+        <div>
+            <TodoList/>
+        </div>
     </t>
 
 </templates>
