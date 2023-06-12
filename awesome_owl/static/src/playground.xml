@@ -10,7 +10,7 @@
             <Counter onChange.bind="incrementSum"/>
         </div>
         <div class="text-primary">
-            hello world <t t-out="state.sum_value"/>
+            Sum of counters :<t t-out="state.sum_value"/>
         </div>
         <div>
             <TodoList/>

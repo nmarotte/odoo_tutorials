@@ -6,6 +6,10 @@ export class TodoItem extends Component {
     static template = "awesome_owl.todo_item"
 
     static props = {
-        todo: Object,
+        todo: {type: Object, shape : {
+            id: Number,
+            description: String,
+            isCompleted: Boolean,
+        }},
     }
 }
