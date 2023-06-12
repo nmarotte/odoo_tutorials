@@ -15,6 +15,18 @@
         <div>
             <TodoList/>
         </div>
+        <div>
+            <h1>Cards</h1>
+            <Card title="'card 1'">
+            <t t-set-slot="secret">
+                <h2>bodyyyyy</h2>
+            </t>
+            defaullllttt
+            </Card>
+            <Card title="'card 2'">
+                <Counter />
+            </Card>
+        </div>
     </t>
 
 </templates>
