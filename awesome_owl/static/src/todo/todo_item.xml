@@ -1,12 +1,10 @@
 <templates xml:space="preserve">
     <t t-name="awesome_owl.todo_item" owl="1">
         <div class="card">
-        <t t-if="!props.todo.isCompleted">
-            <div class="card">
-            
-                <p><t t-out="props.todo.id"/>. <t t-out="props.todo.description"/></p>
-            </div>
-        </t>
+        <div class="card" t-att-class="{'text-muted text-decoration-line-through': props.todo.isCompleted}">
+        
+            <p><t t-out="props.todo.id"/>. <t t-out="props.todo.description"/></p>
+        </div>
         </div>
     </t>
 </templates>
