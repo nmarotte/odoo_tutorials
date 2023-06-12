@@ -1,10 +1,11 @@
 <templates xml:space="preserve">
     <t t-name="awesome_owl.todo_item" owl="1">
-        <div class="card">
         <div class="card" t-att-class="{'text-muted text-decoration-line-through': props.todo.isCompleted}">
-        
-            <p><t t-out="props.todo.id"/>. <t t-out="props.todo.description"/></p>
-        </div>
+            <p>
+                <input type="checkbox" style="margin-right: 5px;" t-on-change="onChange"/>
+                <t t-out="props.todo.id"/>. <t t-out="props.todo.description"/>
+                <span class="fa fa-remove" t-on-click="onClickRemove"/>
+            </p>
         </div>
     </t>
 </templates>

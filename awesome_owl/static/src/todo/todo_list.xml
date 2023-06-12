@@ -1,8 +1,9 @@
 <templates xml:space="preserve">
     <t t-name="awesome_owl.todo_list" owl="1">
         <h1>Todo List</h1>
+        <input type="text" placeholder="Enter a new task" t-on-keyup="addTodo" t-ref="new_todo_input"/>
         <t t-foreach="todos" t-as="todo" t-key="todo.id">
-            <TodoItem todo="todo"/>
+            <TodoItem todo="todo" toggleState.bind="toggleTodo" removeTodo.bind="removeTodo"/>
         </t>
     </t>
 </templates>
