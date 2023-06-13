@@ -3,7 +3,10 @@
 
     <t t-name="awesome_dashboard.clientaction" owl="1">
     <Layout display="display" className="'o_dashboard h-100'">
-        hello dashboard
+        <t t-set-slot="layout-buttons">
+            <button class="btn btn-primary" t-on-click="openCustomers"> Customers </button>
+            <button class="btn btn-primary" t-on-click="openLeads"> Leads </button>
+        </t>
     </Layout>
     </t>
 
